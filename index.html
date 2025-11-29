@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #ffe6f2;
+      padding: 40px;
+    }
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #ff99cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1 id="name"></h1>
+    <h2>🎉 Happy Birthday! 🎉</h2>
+    <p>Wishing you lots of happiness and a great year ahead 🎉🎉</p>
+    <img src="images.jpg" width="250">
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name") || "Tvisha";
+    document.getElementById("name").innerText = "Happy Birthday " + name + "!";
+  </script>
+</body>
+</html>
