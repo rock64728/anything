@@ -77,9 +77,16 @@
   </div>
 
   <!-- Auto-play Music -->
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="happy-birthday-357371.mp3" type="audio/mp3">
   </audio>
+  
+  <script>
+    document.body.addEventListener("click", function () {
+      const music = document.getElementById("bgMusic");
+      music.play();
+    }, { once: true });
+  </script>
 
   <!-- Confetti Script -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -103,3 +110,4 @@
 </body>
 
 </html>
+
